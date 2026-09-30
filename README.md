@@ -4,7 +4,7 @@ A web app that displays a random cocktail with its image, ingredients, measureme
 
 ## Preview
 
-![Cocktail Explorer preview](screenshots/cocktail-explorer.png)
+![Cocktail Explorer preview](screenshots/cocktail-explorer.PNG)
 
 ## Features
 
