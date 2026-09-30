@@ -56,7 +56,7 @@ This educational project uses the development test key `1`.
 
 ## Project background
 
-Built as part of Angela Yu's Complete Web Development Bootcamp API capstone, with step-by-step AI assistance.
+Built as part of Angela Yu's Complete Web Development Bootcamp API capstone.
 
 I customized the visual design, typography, colors, and glow effects.
 
