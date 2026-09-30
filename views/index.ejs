@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cocktail Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <main class="container">
+  <header class="page-header">
+    <h1><%= title %></h1>
+    <h2 class="subhead">Discover a random cocktail and learn how to make it</h2>
+
+    <form action="/" method="GET">
+      <button type="submit">DISCOVER ANOTHER COCKTAIL</button>
+    </form>
+  </header>
+
+  <% if (error) { %>
+  <p class="error-message" role="alert"><%= error %></p>
+<% } %>
+
+<% if (cocktail) { %>
+    <article class="cocktail-card">
+    <img
+      class="cocktail-image"
+      src="<%= cocktail.strDrinkThumb %>"
+      alt="<%= cocktail.strDrink %>"
+      width="300"
+    />
+
+    <div class="cocktail-details">
+      <h2><%= cocktail.strDrink %></h2>
+
+      <h3>Ingredients</h3>
+      <ul>
+        <% for (let i = 1; i <= 15; i++) { %>
+          <% const ingredient = cocktail["strIngredient" + i]; %>
+          <% const measure = cocktail["strMeasure" + i]; %>
+
+          <% if (ingredient && ingredient.trim() !== "") { %>
+            <li><%= measure || "" %> <%= ingredient %></li>
+          <% } %>
+        <% } %>
+      </ul>
+
+      <h3>Instructions</h3>
+      <p><%= cocktail.strInstructions %></p>
+    </div>
+  </article>
+  <% } %>
+</main>
+  </body>
+</html>
