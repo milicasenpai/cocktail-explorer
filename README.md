@@ -2,6 +2,10 @@
 
 A web app that displays a random cocktail with its image, ingredients, measurements, and preparation instructions.
 
+## Preview
+
+![Cocktail Explorer preview](screenshots/cocktail-explorer.png)
+
 ## Features
 
 - Discover a random cocktail with one click.
